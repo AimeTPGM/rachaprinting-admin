@@ -1,6 +1,6 @@
-div.dashboard-wrapper(ng-controller="DashboardCtrl")
+div.dashboard-wrapper
   div.header
-    | คำสั่งซื้อทั้งหมด
+    | {{topic}}
   div.content-wrapper
     div.table-wrapper
       div.table
@@ -39,7 +39,7 @@ div.dashboard-wrapper(ng-controller="DashboardCtrl")
             | {{order.detail.status}}
           div.table-content.in-progress-elem(ng-if="order.detail.status == orderStatus.confirm")
             | {{order.detail.status}}
-          div.table-content.dark-elem(ng-if="order.detail.status == orderStatus.done")
+          div.table-content.common-elem(ng-if="order.detail.status == orderStatus.done")
             | {{order.detail.status}}
           div.table-content.more-info
               div.icon
