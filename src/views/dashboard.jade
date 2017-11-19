@@ -1,4 +1,4 @@
-div.dashboard-wrapper
+div.dashboard-wrapper(ng-controller="DashboardCtrl")
   div.header
     | คำสั่งซื้อทั้งหมด
   div.content-wrapper
@@ -19,18 +19,28 @@ div.dashboard-wrapper
             | สถานะ
           div.table-header
             | ข้อมูลเพิ่มเติม
-        div.table-content-wrapper
+        div.table-content-wrapper(ng-repeat="order in orders")
           div.table-content
-            | 1
+            | {{order.id}}
+          div.table-content.customer
+            div.name
+              | {{order.customer.name}}
+            div.phone
+              | {{order.customer.phone}}
+            div.email
+              | {{order.customer.email}}
           div.table-content
-            | เอม
+            | {{order.detail.product.name}}
           div.table-content
-            | นามบัตร
+            | {{order.detail.quantity}}
           div.table-content
-            | 100 ชิ้น
-          div.table-content
-            | 23 พ.ย. 2560
-          div.table-content
-            | รอคอนเฟิร์มออเดอร์
-          div.table-content
-            | 1
+            | {{order.detail.deliveryDate}}
+          div.table-content.new-elem(ng-if="order.detail.status == orderStatus.waiting")
+            | {{order.detail.status}}
+          div.table-content.in-progress-elem(ng-if="order.detail.status == orderStatus.confirm")
+            | {{order.detail.status}}
+          div.table-content.danger-elem(ng-if="order.detail.status == orderStatus.done")
+            | {{order.detail.status}}
+          div.table-content.more-info
+              div.icon
+                i.fa.fa-file-o

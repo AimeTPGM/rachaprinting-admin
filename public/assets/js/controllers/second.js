@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('SecondCtrl',['$scope', '$http','$window',
+.controller('DashBoardCtrl',['$scope', '$http','$window',
 	function($scope, $http, $window){
 		$scope.hello = "This is second page!";
 	}
