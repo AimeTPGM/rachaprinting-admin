@@ -1,7 +1,8 @@
 //color
 $super-super-dark-grey: #111;
 $super-dark-grey: #222;
-$dark-grey: #444;
+$darker-grey: #444;
+$dark-grey: #555;
 $grey: #666;
 $text-color: white;
 $emerald: #4BC6C0;
@@ -15,7 +16,7 @@ $blue: #96D0E0;
 $blue-hover: #ACEDFF;
 
 body
-  background: $dark-grey;
+  background: $darker-grey;
   height: 100vh;
   color: white;
 
@@ -38,6 +39,26 @@ body
   color: $red;
 .danger-elem:hover
   color: $red-hover;
+
+.table
+  background: transparent;
+  margin: 0;
+  color: white;
+  .table-header-wrapper
+    display: flex;
+    background: $dark-grey;
+    .table-header
+      font-weight: bold;
+      min-width: calc(100%/7);
+      text-align: center;
+      padding: 20px;
+  .table-content-wrapper
+    display: flex;
+    .table-content:not(:nth-child(2))
+      text-align: center;
+    .table-content
+      min-width: calc(100%/7);
+      padding: 20px;
 
 .menu-wrapper
   background: $super-dark-grey;
@@ -69,9 +90,14 @@ body
       display: block;
 
 .dashboard-wrapper
+  width: calc(100vw - 70px);
   .header
     font-size: 1.2em;
     padding: 20px;
   .content-wrapper
-    width: 100%;
-    background: $grey;
+    margin-left: 20px;
+    margin-right: 20px;
+    .table-wrapper
+      background: $grey;
+      color: white;
+

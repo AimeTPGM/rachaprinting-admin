@@ -30,6 +30,26 @@ body {
 .danger-elem:hover {
   color: #FF383E; }
 
+.table {
+  background: transparent;
+  margin: 0;
+  color: white; }
+  .table .table-header-wrapper {
+    display: flex;
+    background: #555; }
+    .table .table-header-wrapper .table-header {
+      font-weight: bold;
+      min-width: calc(100%/7);
+      text-align: center;
+      padding: 20px; }
+  .table .table-content-wrapper {
+    display: flex; }
+    .table .table-content-wrapper .table-content:not(:nth-child(2)) {
+      text-align: center; }
+    .table .table-content-wrapper .table-content {
+      min-width: calc(100%/7);
+      padding: 20px; }
+
 .menu-wrapper {
   background: #222;
   height: 100vh;
@@ -59,10 +79,14 @@ body {
   .menu-wrapper:hover .menu-item .content {
     display: block; }
 
-.dashboard-wrapper .header {
-  font-size: 1.2em;
-  padding: 20px; }
-
-.dashboard-wrapper .content-wrapper {
-  width: 100%;
-  background: #666; }
+.dashboard-wrapper {
+  width: calc(100vw - 70px); }
+  .dashboard-wrapper .header {
+    font-size: 1.2em;
+    padding: 20px; }
+  .dashboard-wrapper .content-wrapper {
+    margin-left: 20px;
+    margin-right: 20px; }
+    .dashboard-wrapper .content-wrapper .table-wrapper {
+      background: #666;
+      color: white; }
