@@ -39,7 +39,7 @@ div.dashboard-wrapper(ng-controller="DashboardCtrl")
             | {{order.detail.status}}
           div.table-content.in-progress-elem(ng-if="order.detail.status == orderStatus.confirm")
             | {{order.detail.status}}
-          div.table-content.danger-elem(ng-if="order.detail.status == orderStatus.done")
+          div.table-content.dark-elem(ng-if="order.detail.status == orderStatus.done")
             | {{order.detail.status}}
           div.table-content.more-info
               div.icon
