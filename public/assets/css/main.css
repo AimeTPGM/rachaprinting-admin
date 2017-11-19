@@ -1,2 +1,60 @@
-div .main {
-  color: pink; }
+body {
+  background: #444;
+  height: 100vh;
+  color: white; }
+
+.body-wrapper {
+  display: inline-flex; }
+
+.common-elem {
+  color: #96D0E0; }
+
+.common-elem:hover {
+  color: #ACEDFF; }
+
+.new-elem {
+  color: #00DD00; }
+
+.new-elem:hover {
+  color: #88F188; }
+
+.in-progress-elem {
+  color: #E3D26F; }
+
+.in-progress-elem:hover {
+  color: #FFEB7C; }
+
+.danger-elem {
+  color: #FF5A5F; }
+
+.danger-elem:hover {
+  color: #FF383E; }
+
+.menu-wrapper {
+  background: #222;
+  height: 100vh;
+  -webkit-transition: width 2s;
+  width: 70px;
+  overflow-x: hidden; }
+  .menu-wrapper .menu-content {
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center; }
+  .menu-wrapper .menu-item {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 300px; }
+    .menu-wrapper .menu-item .icon {
+      font-size: 2em;
+      margin-right: 30px; }
+    .menu-wrapper .menu-item .content {
+      font-size: 1.2em; }
+  .menu-wrapper .menu-item:hover {
+    background: #111; }
+
+.menu-wrapper:hover {
+  width: 300px; }
+  .menu-wrapper:hover .menu-item .content {
+    display: block; }

@@ -1,3 +1,69 @@
-div
-	.main
-		color: pink
+//color
+$super-super-dark-grey: #111;
+$super-dark-grey: #222;
+$dark-grey: #444;
+$text-color: white;
+$emerald: #4BC6C0;
+$base-green: #00DD00;
+$base-green-hover: #88F188;
+$red: #FF5A5F;
+$red-hover: #FF383E;
+$yellow: #E3D26F;
+$yellow-hover: #FFEB7C;
+$blue: #96D0E0;
+$blue-hover: #ACEDFF;
+
+body
+  background: $dark-grey;
+  height: 100vh;
+  color: white;
+
+.body-wrapper
+  display: inline-flex;
+
+.common-elem
+  color: $blue;
+.common-elem:hover
+  color: $blue-hover;
+.new-elem
+  color: $base-green;
+.new-elem:hover
+  color: $base-green-hover;
+.in-progress-elem
+  color: $yellow;
+.in-progress-elem:hover
+  color: $yellow-hover;
+.danger-elem
+  color: $red;
+.danger-elem:hover
+  color: $red-hover;
+
+.menu-wrapper
+  background: $super-dark-grey;
+  height: 100vh;
+  -webkit-transition: width 2s;
+  width: 70px;
+  overflow-x: hidden;
+  .menu-content
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+  .menu-item
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 300px;
+    .icon
+      font-size: 2em;
+      margin-right: 30px;
+    .content
+      font-size: 1.2em;
+  .menu-item:hover
+    background: $super-super-dark-grey;
+.menu-wrapper:hover
+  width: 300px;
+  .menu-item
+    .content
+      display: block;
+

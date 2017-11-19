@@ -10,11 +10,6 @@ app.config(['$routeProvider', '$locationProvider',
 			title : 'Main'
 			
 		})
-		.when('/second',{
-			templateUrl: '/views/second.html',
-			controller: 'SecondCtrl',
-			title : 'Second'
-		})
 		
 		.otherwise({ redirectTo: '/'});
 
