@@ -58,3 +58,11 @@ body {
   width: 300px; }
   .menu-wrapper:hover .menu-item .content {
     display: block; }
+
+.dashboard-wrapper .header {
+  font-size: 1.2em;
+  padding: 20px; }
+
+.dashboard-wrapper .content-wrapper {
+  width: 100%;
+  background: #666; }
