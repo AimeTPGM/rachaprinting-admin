@@ -15,8 +15,19 @@ angular.module('app')
           detail: {
             product: {
               id: 1,
-              name: 'นามบัตร'
+              name: 'นามบัตร',
+              attributes:
+                {
+                  format: 'A4',
+                  print: 'สองหน้า',
+                  printColor: 'พิมพ์สี',
+                  paperType: '180 แกรม',
+                  refinement: 'เคลือบ UV',
+                }
             },
+            mainChoice: 'ออกแบบเอง',
+            price: '575',
+            imgPath: '-',
             quantity: 100,
             deliveryDate: '23 พ.ย. 2560',
             status: 'เสร็จสิ้น'
@@ -32,9 +43,20 @@ angular.module('app')
           detail: {
             product: {
               id: 2,
-              name: 'โปสเตอร์'
+              name: 'โปสเตอร์',
+              attributes:
+                {
+                  format: '1260 x 1124 mm',
+                  print: 'หน้าเดียว',
+                  printColor: 'พิมพ์ขาวดำ',
+                  paperType: '180 แกรม',
+                  refinement: 'เคลือบ UV',
+                }
             },
-            quantity: 200,
+            mainChoice: 'ออกแบบเอง',
+            price: '2300',
+            imgPath: '-',
+            quantity: 100,
             deliveryDate: '27 พ.ย. 2560',
             status: 'รอคอนเฟิร์มออเดอร์'
           }
@@ -126,6 +148,14 @@ angular.module('app')
         }
       ]
       return orders
+    }
+
+    order.getOrder = function(id){
+      var temp = this.getOrders()
+      for (var i = 0; i < temp.length; i++) {
+        if(temp[i].id == id) return temp[i]
+      }
+      return id
     }
     return order
   }

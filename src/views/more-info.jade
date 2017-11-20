@@ -1,0 +1,54 @@
+div.overlay(ng-show="moreInfo")
+div.more-info-wrapper(ng-show="moreInfo")
+  div.close-button-wrapper(ng-click="closeMoreInfo()")
+    i.fa.fa-times
+  div.more-info
+    div.header
+      div
+        | คำสั่งซื้อเลขที่ # {{selectedOrder.id}}
+      div.status
+        | รอดำเนินการ
+    div.content
+      div.customer
+        div.name
+          | {{selectedOrder.customer.name}}
+        div.phone
+          | {{selectedOrder.customer.phone}}
+        div.email
+          | {{selectedOrder.customer.email}}
+      div.order-detail-wrapper
+        div.order-detail-item
+          div.property
+            | สิ่งพิมพ์
+          div.value
+            | {{selectedOrder.detail.product.name}}
+        div.order-detail-item
+          div.property
+            | จำนวน
+          div.value
+            | {{selectedOrder.detail.quantity}} ชิ้น
+        div.order-detail-item
+          div.property
+            | ลูกค้าเลือก
+          div.value
+            | {{selectedOrder.detail.mainChoice}}
+        div.order-detail-item(ng-repeat="(key, value) in selectedOrder.detail.product.attributes")
+          div.property
+            {{key}}
+          div.value
+            {{value}}
+        div.order-detail-item
+          div.property
+            | จัดส่งวันที่
+          div.value
+            | {{selectedOrder.detail.deliveryDate}}
+        div.order-detail-item
+          div.property
+            | ราคา
+          div.value
+            | {{selectedOrder.detail.price}} บาท
+    div.action-wrapper
+      button.button.in-progress-elem.full-width(ng-click="onProcessStatus(selectedOrder.id)")
+        | ดำเนินการพิมพ์แล้ว
+      button.button.common-elem.full-width(ng-click="completeStatus(selectedOrder.id)")
+        | คำสั่งซื้อเสร็จสิ้น

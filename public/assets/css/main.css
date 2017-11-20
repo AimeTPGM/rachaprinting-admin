@@ -42,6 +42,30 @@ body {
 .dark-elem:hover {
   color: #222; }
 
+.full-width {
+  width: 100%; }
+
+button {
+  padding: 20px; }
+
+button.in-progress-elem {
+  color: #222;
+  background: #E3D26F;
+  border: 0; }
+
+button.in-progress-elem:hover {
+  color: #222;
+  background: #FFEB7C; }
+
+button.common-elem {
+  color: #222;
+  background: #96D0E0;
+  border: 0; }
+
+button.common-elem:hover {
+  color: #222;
+  background: #ACEDFF; }
+
 .table {
   background: transparent;
   margin: 0;
@@ -123,10 +147,14 @@ body {
   .menu-wrapper:hover .menu-item .content {
     display: block; }
 
+.content-zone {
+  position: relative; }
+
 .dashboard-wrapper {
   width: calc(100vw - 70px);
   height: 100vh;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  padding-bottom: 20px; }
   .dashboard-wrapper .header {
     font-size: 1.2em;
     padding: 20px; }
@@ -149,3 +177,66 @@ body {
         color: #07EDAF; }
         .dashboard-wrapper .content-wrapper .table-wrapper .table-content-wrapper:hover .table-content.more-info {
           color: #07EDAF; }
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  width: calc(100vw - 70px);
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh; }
+
+.more-info-wrapper {
+  position: absolute;
+  width: calc(50vw - 70px);
+  height: 80vh;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 5px #111;
+  z-index: 2;
+  margin: auto;
+  margin-top: 10vh;
+  left: 0;
+  right: 0; }
+  .more-info-wrapper .close-button-wrapper:hover {
+    color: #FF5A5F; }
+  .more-info-wrapper .close-button-wrapper {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 1.2em;
+    cursor: pointer; }
+  .more-info-wrapper .more-info {
+    padding: 20px;
+    overflow-y: scroll;
+    height: inherit; }
+    .more-info-wrapper .more-info .header {
+      font-size: 2em;
+      text-align: center;
+      padding: 20px; }
+      .more-info-wrapper .more-info .header .status {
+        font-size: 0.4em;
+        margin-left: 10px; }
+    .more-info-wrapper .more-info .content {
+      margin-top: 10px; }
+      .more-info-wrapper .more-info .content .customer {
+        text-align: center; }
+      .more-info-wrapper .more-info .content .order-detail-wrapper {
+        margin-top: 20px; }
+        .more-info-wrapper .more-info .content .order-detail-wrapper .order-detail-item {
+          display: flex;
+          align-items: center;
+          width: 100%; }
+          .more-info-wrapper .more-info .content .order-detail-wrapper .order-detail-item .property {
+            width: 50%;
+            font-size: 1em;
+            text-align: right; }
+          .more-info-wrapper .more-info .content .order-detail-wrapper .order-detail-item .value {
+            width: 50%;
+            margin-left: 10px;
+            font-size: 1.2em; }
+    .more-info-wrapper .more-info .action-wrapper {
+      display: flex; }
+      .more-info-wrapper .more-info .action-wrapper button:last-child {
+        margin: 0; }
+      .more-info-wrapper .more-info .action-wrapper button {
+        margin-right: 10px; }

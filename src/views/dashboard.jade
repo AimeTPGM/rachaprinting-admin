@@ -1,3 +1,4 @@
+div(ng-include="templates.moreInfo")
 div.dashboard-wrapper
   div.header
     | {{topic}}
@@ -34,7 +35,7 @@ div.dashboard-wrapper
               i.fa.fa-caret-down
           div.table-header
             | ข้อมูลเพิ่มเติม
-        div.table-content-wrapper(ng-repeat="order in orders | orderBy:customOrderBy")
+        div.table-content-wrapper(ng-repeat="order in orders | orderBy:customOrderBy", ng-click="showMoreInfo(order.id)")
           div.table-content
             | {{order.id}}
           div.table-content.customer

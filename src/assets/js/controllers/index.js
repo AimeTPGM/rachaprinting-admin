@@ -3,7 +3,8 @@ angular.module('app')
 	function($scope, $http, $window, $timeout, OrderService){
 		$scope.templates = {
       menubar: '/views/menubar.html',
-      dashboard: '/views/dashboard.html'
+      dashboard: '/views/dashboard.html',
+      moreInfo: '/views/more-info.html'
     }
     var topics = {
       all: 'คำสั่งซื้อทั้งหมด',
@@ -18,6 +19,25 @@ angular.module('app')
     }
 
     $scope.customOrderBy = 'id'
+
+    $scope.moreInfo = false
+
+    $scope.closeMoreInfo = function(){
+      $scope.moreInfo = false
+    }
+
+    $scope.showMoreInfo = function(id){
+      $scope.selectedOrder = OrderService.getOrder(id)
+      $scope.moreInfo = true
+    }
+
+    $scope.onProcessStatus = function(id){
+      console.log(id)
+    }
+
+    $scope.completeStatus = function(id){
+      console.log(id)
+    }
 
     $scope.orderBy = function(param, sortID){
       if(param == $scope.customOrderBy) {

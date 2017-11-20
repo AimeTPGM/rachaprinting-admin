@@ -11,5 +11,8 @@ angular.module('app')
     this.getDoneOrders = function(){
       return OrderFactory.getOrders().filter(function (i,n){ return i.detail.status === 'เสร็จสิ้น' })
     }
+    this.getOrder = function(id){
+      return OrderFactory.getOrder(id)
+    }
   }
 );
