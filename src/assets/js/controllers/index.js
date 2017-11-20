@@ -20,7 +20,16 @@ angular.module('app')
 
     $scope.customOrderBy = 'id'
 
-    $scope.selectedOrder = OrderService.getOrders[0]
+    $scope.moreInfo = false
+
+    $scope.closeMoreInfo = function(){
+      $scope.moreInfo = false
+    }
+
+    $scope.showMoreInfo = function(id){
+      $scope.selectedOrder = OrderService.getOrder(id)
+      $scope.moreInfo = true
+    }
 
     $scope.orderBy = function(param, sortID){
       if(param == $scope.customOrderBy) {

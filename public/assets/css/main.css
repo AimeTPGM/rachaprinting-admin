@@ -197,11 +197,14 @@ button.common-elem:hover {
   margin-top: 10vh;
   left: 0;
   right: 0; }
+  .more-info-wrapper .close-button-wrapper:hover {
+    color: #FF5A5F; }
   .more-info-wrapper .close-button-wrapper {
     position: absolute;
     right: 40px;
     top: 20px;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    cursor: pointer; }
   .more-info-wrapper .more-info {
     padding: 20px;
     overflow-y: scroll;
