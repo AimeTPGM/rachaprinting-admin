@@ -5,18 +5,33 @@ div.dashboard-wrapper
     div.table-wrapper
       div.table
         div.table-header-wrapper
-          div.table-header(ng-click="orderBy('id')")
-            | หมายเลขออเดอร์
+          div.table-header(ng-click="orderBy('id', 'sortByID')")
+            div.content
+              | หมายเลขออเดอร์
+            div.sort-icon#sortByID
+              i.fa.fa-caret-down
           div.table-header
             | ลูกค้า
-          div.table-header(ng-click="orderBy('detail.product.id')")
-            | สิ่งพิมพ์
-          div.table-header(ng-click="orderBy('detail.quantity')")
-            | จำนวน
-          div.table-header(ng-click="orderBy('detail.deliveryDate')")
-            | วันที่จัดส่ง
-          div.table-header(ng-click="orderBy('detail.status')")
-            | สถานะ
+          div.table-header(ng-click="orderBy('detail.product.id', 'sortByProduct')")
+            div.content
+              | สิ่งพิมพ์
+            div.sort-icon#sortByProduct
+              i.fa.fa-caret-down
+          div.table-header(ng-click="orderBy('detail.quantity', 'sortByQuantity')")
+            div.content
+              | จำนวน
+            div.sort-icon#sortByQuantity
+              i.fa.fa-caret-down
+          div.table-header(ng-click="orderBy('detail.deliveryDate', 'sortByDelivery')")
+            div.content
+              | วันที่จัดส่ง
+            div.sort-icon#sortByDelivery
+              i.fa.fa-caret-down
+          div.table-header(ng-click="orderBy('detail.status', 'sortByStatus')")
+            div.content
+              | สถานะ
+            div.sort-icon#sortByStatus
+              i.fa.fa-caret-down
           div.table-header
             | ข้อมูลเพิ่มเติม
         div.table-content-wrapper(ng-repeat="order in orders | orderBy:customOrderBy")

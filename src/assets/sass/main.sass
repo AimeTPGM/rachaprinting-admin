@@ -59,11 +59,43 @@ body
   .table-header-wrapper
     display: flex;
     background: $dark-grey;
+    .table-header:nth-child(2), .table-header:nth-child(7)
+      cursor: default;
     .table-header
       font-weight: bold;
       min-width: calc(100%/7);
       text-align: center;
       padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .content
+        margin: 0;
+      .sort-icon
+        margin-left: 10px;
+        transition: .2s all;
+      .rotate
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    .table-header:hover
+      .sort-icon
+        color: $base-green;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      .sort-icon.rotate
+        color: $base-green;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
   .table-content-wrapper
     display: flex;
     border-bottom: solid 0.5px $dark-grey;

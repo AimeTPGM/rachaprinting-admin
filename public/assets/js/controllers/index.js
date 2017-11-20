@@ -1,6 +1,6 @@
 angular.module('app')
-.controller('IndexCtrl',['$scope', '$http','$window', 'OrderService',
-	function($scope, $http, $window, OrderService){
+.controller('IndexCtrl',['$scope', '$http','$window', '$timeout', 'OrderService',
+	function($scope, $http, $window, $timeout, OrderService){
 		$scope.templates = {
       menubar: '/views/menubar.html',
       dashboard: '/views/dashboard.html'
@@ -19,9 +19,15 @@ angular.module('app')
 
     $scope.customOrderBy = 'id'
 
-    $scope.orderBy = function(param){
-      if(param == $scope.customOrderBy) $scope.customOrderBy = "-"+param
-      else $scope.customOrderBy = param
+    $scope.orderBy = function(param, sortID){
+      if(param == $scope.customOrderBy) {
+        $scope.customOrderBy = "-"+param
+        angular.element(document.getElementById(sortID)).addClass('rotate')
+      }
+      else {
+        $scope.customOrderBy = param
+        angular.element(document.getElementById(sortID)).removeClass('rotate')
+      }
     }
 
     $scope.loadOrder = function(orderStatus){
