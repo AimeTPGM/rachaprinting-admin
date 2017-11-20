@@ -1,0 +1,47 @@
+div.overlay
+div.more-info-wrapper
+  div.more-info
+    div.header
+      div
+        | คำสั่งซื้อเลขที่ 1
+      div.status
+        | รอดำเนินการ
+    div.content
+      div.customer
+        div.name
+          | {{selectedOrder.customer.name}}
+        div.phone
+          | {{selectedOrder.customer.phone}}
+        div.email
+          | {{selectedOrder.customer.email}}
+      div.order-detail-wrapper
+        div.order-detail-item
+          div.property
+            | สิ่งพิมพ์
+          div.value
+            | {{selectedOrder.detail.product.name}}
+        div.order-detail-item
+          div.property
+            | จำนวน
+          div.value
+            | {{selectedOrder.detail.quantity}} ชิ้น
+        div.order-detail-item
+          div.property
+            | ลูกค้าเลือก
+          div.value
+            | {{selectedOrder.detail.mainChoice}}
+        div.order-detail-item(ng-repeat="(key, value) in selectedOrder.detail.product.attributes")
+          div.property
+            {{key}}
+          div.value
+            {{value}}
+        div.order-detail-item
+          div.property
+            | จัดส่งวันที่
+          div.value
+            | {{selectedOrder.detail.deliveryDate}}
+        div.order-detail-item
+          div.property
+            | ราคา
+          div.value
+            | {{selectedOrder.detail.price}} บาท

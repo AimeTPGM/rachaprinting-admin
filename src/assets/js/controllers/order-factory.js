@@ -15,8 +15,19 @@ angular.module('app')
           detail: {
             product: {
               id: 1,
-              name: 'นามบัตร'
+              name: 'นามบัตร',
+              attributes:
+                {
+                  format: 'A4',
+                  print: 'สองหน้า',
+                  printColor: 'พิมพ์สี',
+                  paperType: '180 แกรม',
+                  refinement: 'เคลือบ UV',
+                }
             },
+            mainChoice: 'ออกแบบเอง',
+            price: '575',
+            imgPath: '-',
             quantity: 100,
             deliveryDate: '23 พ.ย. 2560',
             status: 'เสร็จสิ้น'
