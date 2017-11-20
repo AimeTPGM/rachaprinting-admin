@@ -31,6 +31,14 @@ angular.module('app')
       $scope.moreInfo = true
     }
 
+    $scope.onProcessStatus = function(id){
+      console.log(id)
+    }
+
+    $scope.completeStatus = function(id){
+      console.log(id)
+    }
+
     $scope.orderBy = function(param, sortID){
       if(param == $scope.customOrderBy) {
         $scope.customOrderBy = "-"+param

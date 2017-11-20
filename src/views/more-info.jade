@@ -48,7 +48,7 @@ div.more-info-wrapper(ng-show="moreInfo")
           div.value
             | {{selectedOrder.detail.price}} บาท
     div.action-wrapper
-      button.button.in-progress-elem.full-width
+      button.button.in-progress-elem.full-width(ng-click="onProcessStatus(selectedOrder.id)")
         | ดำเนินการพิมพ์แล้ว
-      button.button.common-elem.full-width
+      button.button.common-elem.full-width(ng-click="completeStatus(selectedOrder.id)")
         | คำสั่งซื้อเสร็จสิ้น
