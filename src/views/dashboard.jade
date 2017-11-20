@@ -5,21 +5,21 @@ div.dashboard-wrapper
     div.table-wrapper
       div.table
         div.table-header-wrapper
-          div.table-header
+          div.table-header(ng-click="orderBy('id')")
             | หมายเลขออเดอร์
           div.table-header
             | ลูกค้า
-          div.table-header
+          div.table-header(ng-click="orderBy('detail.product.id')")
             | สิ่งพิมพ์
-          div.table-header
+          div.table-header(ng-click="orderBy('detail.quantity')")
             | จำนวน
-          div.table-header
+          div.table-header(ng-click="orderBy('detail.deliveryDate')")
             | วันที่จัดส่ง
-          div.table-header
+          div.table-header(ng-click="orderBy('detail.status')")
             | สถานะ
           div.table-header
             | ข้อมูลเพิ่มเติม
-        div.table-content-wrapper(ng-repeat="order in orders")
+        div.table-content-wrapper(ng-repeat="order in orders | orderBy:customOrderBy")
           div.table-content
             | {{order.id}}
           div.table-content.customer

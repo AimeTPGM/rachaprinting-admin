@@ -17,10 +17,18 @@ angular.module('app')
       done: 'เสร็จสิ้น'
     }
 
+    $scope.customOrderBy = 'id'
+
+    $scope.orderBy = function(param){
+      if(param == $scope.customOrderBy) $scope.customOrderBy = "-"+param
+      else $scope.customOrderBy = param
+    }
+
     $scope.loadOrder = function(orderStatus){
       if(orderStatus == 1) {
         $scope.orders = OrderService.getOrders
         $scope.topic = topics.all
+        console.log($scope.orders)
       }
       else if(orderStatus == 2){
         $scope.orders = OrderService.getWaitingOrders()

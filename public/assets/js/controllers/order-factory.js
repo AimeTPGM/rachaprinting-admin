@@ -6,7 +6,7 @@ angular.module('app')
     order.getOrders = function(){
       var orders = [
         {
-          id: '1',
+          id: 1,
           customer: {
             name: 'เอม',
             phone: '081-234-5678',
@@ -14,16 +14,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '1',
+              id: 1,
               name: 'นามบัตร'
             },
-            quantity: '100',
+            quantity: 100,
             deliveryDate: '23 พ.ย. 2560',
             status: 'เสร็จสิ้น'
           }
         },
         {
-          id: '2',
+          id: 2,
           customer: {
             name: 'เจม',
             phone: '089-876-5432',
@@ -31,16 +31,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '2',
+              id: 2,
               name: 'โปสเตอร์'
             },
-            quantity: '200',
+            quantity: 200,
             deliveryDate: '27 พ.ย. 2560',
             status: 'รอคอนเฟิร์มออเดอร์'
           }
         },
         {
-          id: '3',
+          id: 3,
           customer: {
             name: 'บีม',
             phone: '088-765-4321',
@@ -48,16 +48,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '1',
+              id: 1,
               name: 'นามบัตร'
             },
-            quantity: '200',
+            quantity: 200,
             deliveryDate: '23 พ.ย. 2560',
             status: 'กำลังดำเนินการ'
           }
         },
         {
-          id: '4',
+          id: 4,
           customer: {
             name: 'เตชิน',
             phone: '082-345-6789',
@@ -65,16 +65,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '3',
+              id: 3,
               name: 'โบรชัวร์'
             },
-            quantity: '1500',
+            quantity: 1500,
             deliveryDate: '30 พ.ย. 2560',
             status: 'กำลังดำเนินการ'
           }
         },
         {
-          id: '5',
+          id: 5,
           customer: {
             name: 'น้องหมี',
             phone: '089-876-5432',
@@ -82,16 +82,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '2',
+              id: 2,
               name: 'โปสเตอร์'
             },
-            quantity: '999',
+            quantity: 999,
             deliveryDate: '1 ธ.ค. 2560',
             status: 'รอคอนเฟิร์มออเดอร์'
           }
         },
         {
-          id: '6',
+          id: 6,
           customer: {
             name: 'ออม',
             phone: '088-765-4321',
@@ -99,16 +99,16 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '1',
+              id: 1,
               name: 'นามบัตร'
             },
-            quantity: '450',
+            quantity: 450,
             deliveryDate: '27 พ.ย. 2560',
             status: 'กำลังดำเนินการ'
           }
         },
         {
-          id: '7',
+          id: 7,
           customer: {
             name: 'เอ้',
             phone: '082-345-6789',
@@ -116,10 +116,10 @@ angular.module('app')
           },
           detail: {
             product: {
-              id: '3',
+              id: 3,
               name: 'โบรชัวร์'
             },
-            quantity: '800',
+            quantity: 800,
             deliveryDate: '21 พ.ย. 2560',
             status: 'เสร็จสิ้น'
           }
