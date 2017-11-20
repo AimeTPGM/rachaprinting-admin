@@ -52,6 +52,25 @@ body
 .dark-elem:hover
   color: $super-dark-grey;
 
+.full-width
+  width: 100%;
+
+button
+  padding: 20px;
+button.in-progress-elem
+  color: $super-dark-grey;
+  background: $yellow;
+  border: 0;
+button.in-progress-elem:hover
+  color: $super-dark-grey;
+  background: $yellow-hover;
+button.common-elem
+  color: $super-dark-grey;
+  background: $blue;
+  border: 0;
+button.common-elem:hover
+  color: $super-dark-grey;
+  background: $blue-hover;
 .table
   background: transparent;
   margin: 0;
@@ -181,6 +200,11 @@ body
   margin-top: 10vh;
   left: 0;
   right: 0;
+  .close-button-wrapper
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 1.2em;
   .more-info
     padding: 20px;
     overflow-y: scroll;
@@ -210,4 +234,10 @@ body
             width: 50%;
             margin-left: 10px;
             font-size: 1.2em;
+    .action-wrapper
+      display: flex;
+      button:last-child
+        margin: 0;
+      button
+        margin-right: 10px;
 

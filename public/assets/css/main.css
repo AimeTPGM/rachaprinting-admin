@@ -42,6 +42,30 @@ body {
 .dark-elem:hover {
   color: #222; }
 
+.full-width {
+  width: 100%; }
+
+button {
+  padding: 20px; }
+
+button.in-progress-elem {
+  color: #222;
+  background: #E3D26F;
+  border: 0; }
+
+button.in-progress-elem:hover {
+  color: #222;
+  background: #FFEB7C; }
+
+button.common-elem {
+  color: #222;
+  background: #96D0E0;
+  border: 0; }
+
+button.common-elem:hover {
+  color: #222;
+  background: #ACEDFF; }
+
 .table {
   background: transparent;
   margin: 0;
@@ -173,6 +197,11 @@ body {
   margin-top: 10vh;
   left: 0;
   right: 0; }
+  .more-info-wrapper .close-button-wrapper {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 1.2em; }
   .more-info-wrapper .more-info {
     padding: 20px;
     overflow-y: scroll;
@@ -202,3 +231,9 @@ body {
             width: 50%;
             margin-left: 10px;
             font-size: 1.2em; }
+    .more-info-wrapper .more-info .action-wrapper {
+      display: flex; }
+      .more-info-wrapper .more-info .action-wrapper button:last-child {
+        margin: 0; }
+      .more-info-wrapper .more-info .action-wrapper button {
+        margin-right: 10px; }

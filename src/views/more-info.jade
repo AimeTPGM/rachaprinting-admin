@@ -1,9 +1,11 @@
-div.overlay
-div.more-info-wrapper
+div.overlay(ng-show="moreInfo")
+div.more-info-wrapper(ng-show="moreInfo")
+  div.close-button-wrapper(ng-click="closeMoreInfo()")
+    i.fa.fa-times
   div.more-info
     div.header
       div
-        | คำสั่งซื้อเลขที่ 1
+        | คำสั่งซื้อเลขที่ # {{selectedOrder.id}}
       div.status
         | รอดำเนินการ
     div.content
@@ -45,3 +47,8 @@ div.more-info-wrapper
             | ราคา
           div.value
             | {{selectedOrder.detail.price}} บาท
+    div.action-wrapper
+      button.button.in-progress-elem.full-width
+        | ดำเนินการพิมพ์แล้ว
+      button.button.common-elem.full-width
+        | คำสั่งซื้อเสร็จสิ้น
